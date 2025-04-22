@@ -1,62 +1,52 @@
 body {
     padding: 40px;
-    background-color: lightgray;
+    background-color: #b1b5be;
+    display: flex; /* Make body a flex container for vertical stacking */
+    flex-direction: column; /* Stack header, flex-container, footer vertically */
+    align-items: stretch; /* Make children take full width */
 }
 
 .flex-container {
-   display: flex;
-   flex-flow: column wrap;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack articles above the aside */
+    width: 100%; /* Ensure it takes full width */
+    margin-bottom: 5px; /* Add some space below the articles and aside */
 }
 
-header, .article-wrapper, article, aside, footer {
+header, aside, footer {
     border-radius: .5rem;
+    color: white;
+    text-align: center;
+    padding: 10px; /* Add some padding for better visual appearance */
 }
 
 header {
-    background-color: darkmagenta;
-    color: white;
-    text-align: center;
+    background-color: #9f2063;
     margin-bottom: 5px;
-    /* width: 20%; */
 }
 
 .article-wrapper {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(100, 222, 100);
-    /* margin: 3px; */
-    padding: 3px;
-    width: 100%;
+    border-radius: .5rem;
+    background-color: #27b57f;
+    padding: 5px;
+    margin-bottom: 5px; /* Add space below the article wrapper */
 }
 
 .article-wrapper > article {
-    background-color: rgb(232, 68, 117);
+    border-radius: .5rem;
+    background-color: #e4195b;
     color: white;
     text-align: center;
-    margin: 2px 0;
-    padding: 5px;
-    width: 100%;
+    margin: 8px 0; /* Add vertical margins between articles */
+    padding: 10px; /* Add padding to the article content */
+    width: 100%; /* Ensure articles take full width of the wrapper */
 }
 
 .flex-container > aside {
-    background-color: rgb(85, 65, 215);
-    text-align: center;
-    color: white;
-    margin: 5px 0;
-    padding: 5px;
-    width: 100%;
+    background-color: #116395;
 }
 
 footer {
-    background-color: rgb(254, 135, 0);
-    color: white;
-    text-align: center;
-    margin: 5px 0;
-    padding: 5px;
-    /* width: 20%; */
+    background-color: #e16a26;
+    margin-top: 5px; /* Add some space above the footer */
 }
