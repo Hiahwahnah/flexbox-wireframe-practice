@@ -50,3 +50,19 @@ footer {
     background-color: #e16a26;
     margin-top: 5px; /* Add some space above the footer */
 }
+
+@media (min-width: 900px) {
+    .flex-container {
+        flex-direction: row;
+        gap: 10px; /* optional: adds space between aside and article-wrapper */
+    }
+
+    .flex-container > aside {
+        order: -1; /* Moves aside to the left */
+        width: 25%; /* or any suitable width */
+    }
+
+    .article-wrapper {
+        width: 75%; /* or any suitable width */
+    }
+}
